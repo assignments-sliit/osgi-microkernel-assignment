@@ -1,0 +1,1 @@
+# osgi-microkernel-assignment
