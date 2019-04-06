@@ -1,0 +1,96 @@
+package customer_02;
+
+import java.util.Scanner;
+
+import org.osgi.framework.BundleActivator;
+import org.osgi.framework.BundleContext;
+import org.osgi.framework.ServiceReference;
+
+import Interface.Dress;
+import Interface.Toy;
+import MarketingInterface.MarketingInterFa;
+import User.Customer_02;
+
+public class Activator implements BundleActivator {
+
+	private static BundleContext context;
+	private MarketingInterFa ms;
+    private Dress dr;
+    private Toy toy;
+	static BundleContext getContext() {
+		return context;
+	}
+
+	/*
+	 * (non-Javadoc)
+	 * @see org.osgi.framework.BundleActivator#start(org.osgi.framework.BundleContext)
+	 */
+	public void start(BundleContext bundleContext) throws Exception {
+		Activator.context = bundleContext;
+		System.out.println("customer_2 starting ....");
+		Scanner sc=new Scanner(System.in);
+		String whileCon="no";
+		do {
+		int a=Customer_02.find();
+		
+		if(a==2) {
+			ServiceReference service =context.getServiceReference(MarketingInterFa.class);
+			if(service!=null) {
+				ms=(MarketingInterFa)context.getService(service);
+				if(ms!=null) {
+					Customer_02.run(ms);
+					context.ungetService(service);
+				}else {
+					System.out.println(" customer 2  cannot be run.... ");
+				}
+			}else {
+				System.out.println("Customer 2 cannot be found....");
+			}
+		}else if(a==1){
+			ServiceReference service =context.getServiceReference(Dress.class);
+			if(service!=null) {
+				dr=(Dress)context.getService(service);
+				if(dr!=null) {
+					Customer_02.run2(dr);
+					context.ungetService(service);
+				}else {
+					System.out.println(" customer 2  cannot be run.... ");
+				}
+			}else {
+				System.out.println("Customer 2 cannot be found....");
+			}
+		}else if(a==3) {
+			ServiceReference service =context.getServiceReference(Toy.class);
+			if(service!=null) {
+				toy=(Toy)context.getService(service);
+				if(toy!=null) {
+					Customer_02.run3(toy);
+					context.ungetService(service);
+				}else 
+					System.out.println(" customer 2  cannot be run.... ");
+				}
+			else {
+				System.out.println("Customer 2 cannot be found....");
+			}
+		}else {
+			System.out.println(" ");
+		}
+		
+		System.out.println("do you want to exit .. yes/no");
+		whileCon=sc.next();
+	 
+		}while(whileCon.equals("no"));
+		
+		System.out.println("customer_2 started.....");
+	}
+
+	/*
+	 * (non-Javadoc)
+	 * @see org.osgi.framework.BundleActivator#stop(org.osgi.framework.BundleContext)
+	 */
+	public void stop(BundleContext bundleContext) throws Exception {
+		Activator.context = null;
+		System.out.println("Customer 2 stopped....");
+	}
+
+}

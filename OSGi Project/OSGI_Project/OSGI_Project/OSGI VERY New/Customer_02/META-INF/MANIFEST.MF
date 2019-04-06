@@ -1,0 +1,14 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Customer_02
+Bundle-SymbolicName: Customer_02
+Bundle-Version: 1.0.0.qualifier
+Bundle-Activator: customer_02.Activator
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Automatic-Module-Name: Customer_02
+Import-Package: org.osgi.framework;version="1.3.0"
+Bundle-ActivationPolicy: lazy
+Require-Bundle: FruitShop;bundle-version="1.0.0",
+ DerssShop;bundle-version="1.0.0",
+ ToyShop;bundle-version="1.0.0",
+ TransportService;bundle-version="1.0.0"
