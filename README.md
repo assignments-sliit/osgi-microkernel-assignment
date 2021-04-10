@@ -14,7 +14,7 @@
 - [Project Description](#Project-Description)
 
 - [System Flowchart](#System-Flowchart)
-- [System Screenshot](#System-Screenshot)
+- [System Screenshots](#System-Screenshots)
 
 - [Manifest Screenshots](#Manifest-Screenshots)
 
