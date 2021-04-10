@@ -11,10 +11,12 @@
 
 ## Table of Contents
 
-- Project Description
-- System Flowchart
-- System Screenshot
-- Manifest Screenshots
+- [Project Description](#Project-Description)
+
+- [System Flowchart](#System-Flowchart)
+- [System Screenshot](#System-Screenshot)
+
+- [Manifest Screenshots](#Manifest-Screenshots)
 
 ## Project Description
 
@@ -58,10 +60,18 @@ FOR BETTER UNDERSTANDING, A FLOWCHART FOR THE SYSTEM HAS BEEN SHOWN BELOW.
 
 ## Manifest Screenshots
 
-![Flowchart](img/MANIFEST01.png "Flowchart")
+- Manifest of Customer 02 (Consumer class)
 
-![Flowchart](img/MANIFEST02.png "Flowchart")
+  ![Flowchart](img/MANIFEST01.png "Flowchart")
 
-![Flowchart](img/MANIFEST03.png "Flowchart")
+- Manifest of Dress shop (Publisher class)
 
-![Flowchart](img/MANIFEST04.png "Flowchart")
+  ![Flowchart](img/MANIFEST02.png "Flowchart")
+
+- Manifest of Fruit shop (Publisher class)
+
+  ![Flowchart](img/MANIFEST03.png "Flowchart")
+
+- Manifest of Toy shop (Publisher class)
+
+  ![Flowchart](img/MANIFEST04.png "Flowchart")
