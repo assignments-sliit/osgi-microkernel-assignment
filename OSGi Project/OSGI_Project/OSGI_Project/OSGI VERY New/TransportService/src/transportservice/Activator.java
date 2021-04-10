@@ -3,7 +3,6 @@ package transportservice;
 import org.osgi.framework.BundleActivator;
 import org.osgi.framework.BundleContext;
 
-
 public class Activator implements BundleActivator {
 
 	private static BundleContext context;
@@ -18,9 +17,9 @@ public class Activator implements BundleActivator {
 		this.CallDressService();
 		System.out.println("Delivery service started....");
 	}
-	
+
 	private void CallDressService() {
-		TransportInterFa Ds=new Dress_delivery();
+		TransportInterFa Ds = new Dress_delivery();
 		context.registerService(TransportInterFa.class, Ds, null);
 	}
 

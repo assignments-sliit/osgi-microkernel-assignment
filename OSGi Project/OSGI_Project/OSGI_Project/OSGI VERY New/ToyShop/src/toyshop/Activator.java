@@ -19,15 +19,14 @@ public class Activator implements BundleActivator {
 		System.out.println("Toy Shop Opening...");
 		this.calltoy();
 		System.out.println("Toy Shop is Open");
-		
+
 	}
-	
+
 	private void calltoy() {
-		Toy toy=new toyImple();
+		Toy toy = new toyImple();
 		context.registerService(Toy.class, toy, null);
 	}
 
-	
 	public void stop(BundleContext bundleContext) throws Exception {
 		Activator.context = null;
 		System.out.println("Toy Shop closed");

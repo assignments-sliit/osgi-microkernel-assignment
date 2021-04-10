@@ -14,7 +14,6 @@ public class Activator implements BundleActivator {
 		return context;
 	}
 
-	
 	public void start(BundleContext bundleContext) throws Exception {
 		Activator.context = bundleContext;
 		System.out.println("Dress shop Opening");
@@ -23,10 +22,10 @@ public class Activator implements BundleActivator {
 	}
 
 	private void CallInterface() {
-		Dress dress=new InterfaceImpl();
-		context.registerService(Dress.class,dress,null);
+		Dress dress = new InterfaceImpl();
+		context.registerService(Dress.class, dress, null);
 	}
-	
+
 	public void stop(BundleContext bundleContext) throws Exception {
 		Activator.context = null;
 		System.out.println("Dress Shop Closed");
